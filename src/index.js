@@ -23,13 +23,16 @@ class Counter extends React.Component {
 
     return (
       <div className="App">
-        <button className="minusBtn" onClick={this.onMinusClick}>
-          -
-        </button>
-        {number}
-        <button className="addBtn" onClick={this.onPlusClick}>
-          +
-        </button>
+        <h1>Counter</h1>
+        <div>
+          <button className="minusBtn" onClick={this.onMinusClick}>
+            -
+          </button>
+          {number}
+          <button className="addBtn" onClick={this.onPlusClick}>
+            +
+          </button>
+        </div>
       </div>
     );
   }
