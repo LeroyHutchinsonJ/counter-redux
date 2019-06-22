@@ -1,15 +1,29 @@
-import React from "react";
 import ReactDOM from "react-dom";
-
+import React from "react";
 import "./styles.css";
 
-function App() {
-  return (
-    <div className="App">
-      
-    </div>
-  );
+class Counter extends React.Component {
+  //This controls the current number in the counter
+  state = {
+    number: 0
+  };
+
+  //This function increases the number by 1
+  onPlusClick = () => {
+    this.setState({ number: this.state.number + 1 });
+  };
+
+  //This function decreases the number by 1
+  onMinusClick = () => {
+    this.setState({ number: this.state.number - 1 });
+  };
+
+  render() {
+    var { number } = this.state;
+
+    return <div className="App">{number}</div>;
+  }
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<Counter />, rootElement);
