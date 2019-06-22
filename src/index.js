@@ -21,7 +21,17 @@ class Counter extends React.Component {
   render() {
     var { number } = this.state;
 
-    return <div className="App">{number}</div>;
+    return (
+      <div className="App">
+        <button className="minusBtn" onClick={this.onMinusClick}>
+          -
+        </button>
+        {number}
+        <button className="addBtn" onClick={this.onPlusClick}>
+          +
+        </button>
+      </div>
+    );
   }
 }
 
