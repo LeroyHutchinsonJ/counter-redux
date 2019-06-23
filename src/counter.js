@@ -1,5 +1,8 @@
 import React from "react";
 
+//This imports the connect function from react redux
+import { connect } from "react-redux";
+
 class Counter extends React.Component {
   //This controls the current number in the counter
   state = {
@@ -36,4 +39,10 @@ class Counter extends React.Component {
   }
 }
 
-export default Counter;
+//This takes the entire state  example (number : 42)
+var mapStateToProps = state => ({
+  number: state.number
+});
+
+//When you call connect, it returns a function which you then call with counter, which in turn returns a new component
+export default connect(mapStateToProps)(Counter);
