@@ -6,12 +6,12 @@ import { connect } from "react-redux";
 class Counter extends React.Component {
   //This function increases the number by 1
   onPlusClick = () => {
-    //Fill in later
+    this.props.dispatch({ type: "Increment" });
   };
 
   //This function decreases the number by 1
   onMinusClick = () => {
-    //Fill in later
+    this.props.dispatch({ type: "Decrement" });
   };
 
   render() {

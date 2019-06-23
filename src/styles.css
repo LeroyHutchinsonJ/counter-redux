@@ -23,6 +23,16 @@
   border-left: 1px solid black;
   border-right: none;
 }
+
+.minusBtn:active {
+  background-color: red;
+  color: white;
+}
+.addBtn:active {
+  background-color: green;
+  color: white;
+}
+
 .numberCount {
   padding: 30px;
   font-size: 40px;

@@ -13,6 +13,7 @@ const initialState = {
 
 //This reducer function can return the initial state and change it
 function reducer(state = initialState, action) {
+  //Takes the values in action and uses a switch statement to find out what to do with them
   switch (action.type) {
     case "Increment": {
       return { count: state.count + 1 };
