@@ -4,11 +4,6 @@ import React from "react";
 import { connect } from "react-redux";
 
 class Counter extends React.Component {
-  //This controls the current number in the counter
-  state = {
-    number: 0
-  };
-
   //This function increases the number by 1
   onPlusClick = () => {
     //Fill in later
@@ -20,8 +15,6 @@ class Counter extends React.Component {
   };
 
   render() {
-    var { number } = this.props;
-
     return (
       <div className="App">
         <h1>Counter</h1>
@@ -29,7 +22,7 @@ class Counter extends React.Component {
           <button className="minusBtn" onClick={this.onMinusClick}>
             <h2>-</h2>
           </button>
-          <span className="numberCount">{number}</span>
+          <span className="numberCount">{this.props.count}</span>
           <button className="addBtn" onClick={this.onPlusClick}>
             <h2>+</h2>
           </button>
@@ -39,9 +32,9 @@ class Counter extends React.Component {
   }
 }
 
-//This takes the entire state  example (number : 42)
-var mapStateToProps = state => ({
-  number: state.number
+//This takes the entire state  example (count : 42)
+const mapStateToProps = state => ({
+  count: state.count
 });
 
 //When you call connect, it returns a function which you then call with counter, which in turn returns a new component
