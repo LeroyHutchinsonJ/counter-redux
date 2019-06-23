@@ -24,13 +24,13 @@ class Counter extends React.Component {
     return (
       <div className="App">
         <h1>Counter</h1>
-        <div>
+        <div className="container">
           <button className="minusBtn" onClick={this.onMinusClick}>
-            -
+            <h2>-</h2>
           </button>
-          {number}
+          <span className="numberCount">{number}</span>
           <button className="addBtn" onClick={this.onPlusClick}>
-            +
+            <h2>+</h2>
           </button>
         </div>
       </div>
