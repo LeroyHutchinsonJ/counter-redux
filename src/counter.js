@@ -4,6 +4,8 @@ import React from "react";
 import { connect } from "react-redux";
 
 class Counter extends React.Component {
+
+  
   //This function increases the number by 1
   onPlusClick = () => {
     this.props.dispatch({ type: "Increment" });
