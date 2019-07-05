@@ -28,9 +28,6 @@ function reducer(state = initialState, action) {
 }
 const store = createStore(reducer);
 
-//Passes in values to action
-store.dispatch({ type: "Increment" });
-
 var Index = () => {
   return (
     <Provider store={store}>
