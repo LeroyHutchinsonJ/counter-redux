@@ -4,16 +4,20 @@ import React from "react";
 import { connect } from "react-redux";
 
 class Counter extends React.Component {
-  //This function increases the number by 1, sends a call to the store and tells it to set the action type to increment
+  //This function changes the action type to Increment
   onPlusClick = () => {
     this.props.dispatch({ type: "Increment" });
   };
-
-  //This function decreases the number by 1, sends a call to the store and tells it to set the action type to decrement
+  to;
+  //This function changes the action type to Decrement
   onMinusClick = () => {
     this.props.dispatch({ type: "Decrement" });
   };
 
+  //This function changes the action type to reset
+  onResetClick = () => {
+    this.props.dispatch({ type: "Reset" });
+  };
   render() {
     return (
       <div className="App">

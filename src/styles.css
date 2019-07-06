@@ -6,7 +6,8 @@
   width: 250px;
 }
 .addBtn,
-.minusBtn {
+.minusBtn,
+.resetBtn {
   background-color: white;
   width: 80px;
   height: 80px;
@@ -41,4 +42,14 @@
 .container {
   display: flex;
   align-items: center;
+}
+.resetBtn {
+  border-top: none;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+.resetBtn:active {
+  background-color: purple;
+  color: white;
 }
