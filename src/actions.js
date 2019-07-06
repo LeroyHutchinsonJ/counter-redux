@@ -1,5 +1,3 @@
-import React from "react";
-
 //Export increment variable
 export const INCREMENT = "Increment";
 
