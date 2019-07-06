@@ -3,20 +3,22 @@ import React from "react";
 //This imports the connect function from react redux
 import { connect } from "react-redux";
 
+//Import vars that hold strings
+import { INCREMENT, DECREMENT, RESET } from "./actions";
+
 class Counter extends React.Component {
   //This function changes the action type to Increment
   onPlusClick = () => {
-    this.props.dispatch({ type: "Increment" });
+    this.props.dispatch({ type: INCREMENT });
   };
-  to;
   //This function changes the action type to Decrement
   onMinusClick = () => {
-    this.props.dispatch({ type: "Decrement" });
+    this.props.dispatch({ type: DECREMENT });
   };
 
   //This function changes the action type to reset
   onResetClick = () => {
-    this.props.dispatch({ type: "Reset" });
+    this.props.dispatch({ type: RESET });
   };
   render() {
     return (
@@ -39,10 +41,8 @@ class Counter extends React.Component {
   }
 }
 
-//This takes the entire state  example (count : 42)
-const mapStateToProps = state => ({
-  count: state.count
-});
+//This is a function that takes a state and sets it to counter
+const mapStateToProps = state => ({ count: state.count });
 
-//When you call connect, it returns a function which you then call with counter, which in turn returns a new component
+//When you call connect, what it does is it looks into redux, takes out the state and passes it to mapStateToProps, then mapStateToProps picks what it needs out of state and sends it to the Counter Component
 export default connect(mapStateToProps)(Counter);

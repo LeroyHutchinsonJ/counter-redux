@@ -22,7 +22,7 @@ function reducer(state = initialState, action) {
       return { count: state.count - 1 };
     }
     case "Reset": {
-      return{count: 0}
+      return { count: 0 };
     }
     default: {
       return state;
@@ -33,6 +33,7 @@ const store = createStore(reducer);
 
 var Index = () => {
   return (
+    //The provider allows every component in the app to access the redux store
     <Provider store={store}>
       <Counter />
     </Provider>
