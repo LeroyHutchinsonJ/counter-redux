@@ -31,6 +31,9 @@ class Counter extends React.Component {
             <h2>+</h2>
           </button>
         </div>
+        <button className="resetBtn" onClick={this.onResetClick}>
+          <h2> Reset</h2>
+        </button>
       </div>
     );
   }
