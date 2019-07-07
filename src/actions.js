@@ -1,7 +1,7 @@
 //Export increment variable
-export const INCREMENT = () => ({ type: "Increment" });
+export const INCREMENT = "Increment";
 //Export decrement variable
-export const DECREMENT = () => ({ type: "Decrement" });
+export const DECREMENT = "Decrement";
 
 //Export reset variable
-export const RESET = () => ({ type: "Reset" });
+export const RESET = "Reset";
