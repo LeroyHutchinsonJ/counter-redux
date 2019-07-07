@@ -9,11 +9,11 @@ import { INCREMENT, DECREMENT, RESET } from "./actions";
 class Counter extends React.Component {
   //This function changes the action type to Increment
   onPlusClick = () => {
-    this.props.dispatch({ type: INCREMENT });
+    this.props.INCREMENT();
   };
   //This function changes the action type to Decrement
   onMinusClick = () => {
-    this.props.dispatch({ type: DECREMENT });
+    this.props.DECREMENT();
   };
 
   //This function changes the action type to reset
@@ -44,5 +44,14 @@ class Counter extends React.Component {
 //This is a function that takes a state and sets it to counter
 const mapStateToProps = state => ({ count: state.count });
 
+//
+const mapDispatchToProps = {
+  INCREMENT,
+  DECREMENT,
+  RESET
+};
 //When you call connect, what it does is it looks into redux, takes out the state and passes it to mapStateToProps, then mapStateToProps picks what it needs out of state and sends it to the Counter Component
-export default connect(mapStateToProps)(Counter);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Counter);
