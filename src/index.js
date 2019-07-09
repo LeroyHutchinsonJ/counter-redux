@@ -2,7 +2,7 @@ import ReactDOM from "react-dom";
 import React from "react";
 import "./styles.css";
 import Counter from "./counter.js";
-//Import for the redux store
+//Import for the redux store, and middle ware which allows you to call apis with redux
 import { createStore } from "redux";
 //This plugs the store into the connect function
 import { Provider } from "react-redux";
