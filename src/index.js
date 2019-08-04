@@ -2,9 +2,9 @@ import ReactDOM from "react-dom";
 import React from "react";
 import "./styles.css";
 import Counter from "./counter.js";
-//Import for the redux store which allows you to call apis with redux
+//Import for the redux store, allows you to put shit inside the state and get shit out
 import { createStore } from "redux";
-//This plugs the store into the connect function
+//Import for the redux provider, this connects the redux to the actual react
 import { Provider } from "react-redux";
 
 const initialState = {
